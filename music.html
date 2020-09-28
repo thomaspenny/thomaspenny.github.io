@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Thomas Penny</title>
+  <link href="https://fonts.googleapis.com/css?family=Verdana" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">   
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">Thomas Penny</div>
+            </div>
+        </div>
+
+        <h1 align=center ><hr style="color: black;"><u> Music</u></h1>
+        <h2 align=center>Favourite pieces from my favourite composers, including those I have arranged for solo piano.
+            <hr style="color: black;">
+        </h2>
+        <div class="music-outer-portfolio-items-wrapper">
+            <div class="music-portfolio-img-background-sidebanner">
+                <img src="images/trees.jpg">
+            </div>
+
+
+            <div class="music-inner-portfolio-items-wrapper">
+                
+                
+                <div class="portfolio-item-wrapper">
+                    <div class="music-portfolio-img-background" style="background-image:url(images/chopin.jpg)"></div>
+                        <div class="music-list-hidden">
+                            <h2>Frédéric Chopin</h2>
+                            <ul>
+                                <li>Waltz Op. 64 No. 2</li>
+                                <li>Etude Op. 10 No. 3 & 6</li>
+                                <li>Nocturne Op. 55 No. 1</li>
+                            </ul>
+                        </div>
+                        <div class="music-text-wrapper-hidden">
+                            <div class="music-logo-wrapper"><img src="images/logos/chop.jpg"></div>
+                        </div>
+                        <div class="music-quote-wrapper-hidden">“Oh, how hard it must be to die anywhere but in one's birthplace.”</div>
+                </div>
+
+
+                <div class="portfolio-item-wrapper">
+                    <div class="music-portfolio-img-background" style="background-image:url(images/liszt.jpg)"></div>
+                    <div class="music-list-hidden">
+                        <h2>Franz Liszt</h2>
+                        <ul>
+                            <li>S.172 Consolation No. 3</li>
+                            <li>S.541 Liebestraum</li>
+                            <li>S.558/12 Ave Maria</li>
+                        </ul>
+                    </div>
+                    <div class="music-text-wrapper-hidden">
+                        <div class="music-logo-wrapper"><img src="images/logos/lis.jpg"></div>
+                    </div>
+                    <div class="music-quote-wrapper-hidden">“Life is only a long and bitter suicide, and faith alone can transform this suicide into a sacrifice.”</div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="music-portfolio-img-background" style="background-image:url(images/tchaikovsky.JPG)"></div>
+                    <div class="music-list-hidden">
+                        <h2>Pyotr Ilyich Tchaikovsky</h2>
+                        <ul>
+                            <li>The Nutcracker: Dance of the Sugarplum Fairy</li>
+                            <li>The Seasons Op 37a: June & October </li>
+                        </ul>
+                    </div>
+                    <div class="music-text-wrapper-hidden">
+                        <div class="music-logo-wrapper"><img src="images/logos/tchai.jpg"></div>
+                    </div>
+                    <div class="music-quote-wrapper-hidden">“Inspiration is a guest that does not willingly visit the lazy.”</div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="music-portfolio-img-background" style="background-image:url(images/rachmaninov.jpg)"></div>
+                    <div class="music-list-hidden">
+                        <h2>Sergei Rachmaninoff</h2>
+                        <ul>
+                            <li>Prelude Op.3 No. 2</li>
+                            <li>Rhapsody on a Theme of Paganaini Op. 43 var. 18</li>
+                        </ul>
+                    </div>
+                    <div class="music-text-wrapper-hidden">
+                        <div class="music-logo-wrapper"><img src="images/logos/rach.jpg"></div>
+                    </div>
+                    <div class="music-quote-wrapper-hidden">“Music is enough for a lifetime, but a lifetime is not enough for music.”</div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="music-portfolio-img-background" style="background-image:url(images/writing.jpg)"></div>
+                    <div class="music-list-hidden">
+                        <h2>Personal Transcriptions</h2>
+                        <ul>
+                            <li><a href="pdf/vivaldi_winter_first_solo_piano_t_penny.pdf" target="_blank">Vivaldi: 'Winter' Concerto No. 4, I Allegro non molto</a></li>
+                            <li><a href="pdf/rachmaninoff_les_larmes_solo_piano_t_penny.pdf" target="_blank">Rachmaninoff: Fantaisie-tableaux Op. 5 No. 3 'Les Larmes'</a></li>
+                        </ul>
+                    </div>
+                    <div class="music-text-wrapper-hidden">
+                        <div class="music-logo-wrapper"><img src="images/logos/pen and paper.jpg"></div>
+                    </div>
+                    <div class="music-quote-wrapper-hidden">Works that I have arranged for solo piano, free for public use.</div>
+                </div>
+            </div>>
+        </div>
+    </div>
+</body>
+
+<script>
+  const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
